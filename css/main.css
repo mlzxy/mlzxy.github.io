@@ -416,6 +416,7 @@ span.small-r-space{
 
 #profile-image {
     width: 160px;
+    cursor: url("/images/zhuzhu_cursor.png") 30 30, move;
 }
 
 #profile-email {
