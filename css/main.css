@@ -107,6 +107,7 @@ blockquote {
     flex: 1 1 auto;
     overflow-y: auto;
     min-height: 0px; 
+    margin-left:2em;
 }
 
 #site_banner {
