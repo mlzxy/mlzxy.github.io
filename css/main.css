@@ -431,3 +431,7 @@ span.small-r-space{
 .bold {
     font-weight: bold;
 }
+
+.normal-size {
+    font-size: 100% !important;
+}
