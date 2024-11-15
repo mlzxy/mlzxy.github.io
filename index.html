@@ -8,6 +8,42 @@
     <link rel="icon" type="image/png" href="images/robot.png">
 </head>
 
+<script>
+let fPressCount = 0;
+let timer;
+
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'f' || event.key === 'F') {
+        fPressCount++;
+        if (fPressCount === 5) {
+            triggerFunction();
+            resetCounter();
+        }
+        clearTimeout(timer);
+        timer = setTimeout(resetCounter, 1000); // 1-second delay to reset
+    }
+});
+
+function resetCounter() {
+    fPressCount = 0;
+}
+
+function triggerFunction() {
+    const elements = document.querySelectorAll('.ppt');
+    elements.forEach(element => {
+        const computedStyle = window.getComputedStyle(element);
+        if (computedStyle.visibility === 'hidden' || computedStyle.height === '0px') {
+        element.style.visibility = 'visible';
+        element.style.height = 'auto';
+    } else {
+        element.style.visibility = 'hidden';
+        element.style.height = '0';
+    }
+    });
+}
+
+</script>
+
 <body data-new-gr-c-s-check-loaded="14.1199.0" data-gr-ext-installed="">
     <table id="main" style="width:100%;max-width:950px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;margin-top:5%;">
     <tbody>
@@ -80,6 +116,14 @@
                         &nbsp;•&nbsp;
                         <a href="https://github.com/mlzxy/arp" target="_blank">Code & Video</a>
                     </p>
+
+                    <div class="ppt">
+                        <ul>
+                            <li>Robot actions as a language, but robot actions are heterogeneous and often continuous.</li>
+                            <li>We propose chunking causal transformer to adapt autoregressive models for robot actions</li>
+                            <li>A universal architecture that establishes new state of the art in Push-T, ALOHA, and RLBench.</li>
+                        </ul>
+                    </div>
                 </td>
             </tr>
             </tbody>
@@ -108,6 +152,13 @@
                         &nbsp;•&nbsp;
                         <a href="https://mlzxy.github.io/devit" target="_blank">Website</a>
                     </p>
+                    <div class="ppt">
+                        <ul>
+                            <li>Existing work mix representation learning with detection</li>
+                            <li>We don't learn representation, but focus on how to use existing pretrained ones</li>
+                            <li>Detect by propagating ROI regions in attention map</li>
+                        </ul>
+                    </div>
                 </td>
             </tr>
             </tbody>
@@ -137,6 +188,13 @@
                         &nbsp;•&nbsp;
                         <a href="https://mlzxy.github.io/visual-kinetic-chain/" target="_blank">Website</a>
                     </p>
+                    <div class="ppt">
+                        <ul>
+                            <li>How to learn a single policy for diverse environments? </li>
+                            <li>Use a universal, visually grounded, analytically determined action space!</li>
+                            <li>That is, the visual projection of the robot kinematic structure</li>
+                        </ul>
+                    </div>
                 </td>
             </tr>
             </tbody>
@@ -165,6 +223,14 @@
                         &nbsp;•&nbsp;
                         <a href="https://mlzxy.github.io/imop" target="_blank">Website</a>
                     </p>
+
+                    <div class="ppt">
+                        <ul>
+                            <li>Bind 3D spatial regions to robot actions, so actions have semantics!</li>
+                            <li>Learn to discover these "key regions" and match regions between demonstrations </li>
+                            <li>Through region matching, we transfer robot actions to new scenes in one-shot.</li>
+                        </ul>
+                    </div>
                 </td>
             </tr>
             </tbody>
@@ -219,6 +285,13 @@
                         &nbsp;•&nbsp;
                         <a href="https://github.com/mlzxy/flowdino" target="_blank">Code</a>
                     </p>
+
+                    <div class="ppt">
+                        <ul>
+                            <li>Make DINO features more object-aware</li>
+                            <li>By using optical flow as regularization, i.e., similar local flow yields similar local features </li>
+                        </ul>
+                    </div>
                 </td>
             </tr>
             </tbody>
@@ -244,6 +317,14 @@
                         &nbsp;•&nbsp;
                         <a href="https://github.com/mlzxy/qsparse" target="_blank">Code</a>
                     </p>
+
+
+                    <div class="ppt">
+                        <ul>
+                            <li>Prune layers in topological orders, instead of all at once</li>
+                            <li>Because the neuron importance heavily depends on the sparsity of previous layers.</li>
+                        </ul>
+                    </div>
                 </td>
             </tr>
             </tbody>
