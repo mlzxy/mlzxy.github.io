@@ -24,6 +24,12 @@ a {
   p {
     color: #77808b;
   }
+
+  .spanp {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #77808b;
+  }
   
   strong {
     font-family: 'Roboto', sans-serif;
