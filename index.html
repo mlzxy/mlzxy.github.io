@@ -43,6 +43,14 @@
         });
     }
 
+    // Duplicate ticker content for seamless loop
+    window.addEventListener('load', function () {
+        const track = document.querySelector('.rolling-track');
+        if (track) {
+            track.innerHTML += track.innerHTML;
+        }
+    });
+
 </script>
 
 <body data-new-gr-c-s-check-loaded="14.1199.0" data-gr-ext-installed="">
@@ -62,19 +70,25 @@
                                 </td>
                                 <td style="padding:2.5%;width:75%;vertical-align:middle">
                                     <!-- Research figure with text wrapping -->
-                                    <img src="images/circle.png" alt="Research Figure" 
-                                         style="float: right; margin: 0 0 20px 20px; width: 300px; height: 300px;">
-                                    
+                                    <img src="images/circle.png" alt="Research Figure"
+                                        style="float: right; margin: 0 0 20px 20px; width: 300px; height: 300px;">
+
                                     <p style="text-align:left">
                                         <name>Xinyu Zhang (张鑫语)</name>
                                     </p>
                                     <p>
-                                        I am a fourth-year PhD candidate in Computer Science at Rutgers University, advised
-                                        by <a href="http://rl.cs.rutgers.edu/">Prof. Abdeslam Boularias</a>. 
+                                        I am a fourth-year PhD candidate in Computer Science at Rutgers University,
+                                        advised
+                                        by <a href="http://rl.cs.rutgers.edu/">Prof. Abdeslam Boularias</a>.
                                         <!-- Currently, I am interning at Meta Reality Lab. -->
                                     </p>
                                     <p>
-                                        Before joining Rutgers, I worked at <img src="images/microsoft.png" alt="Microsoft" style="height:1em; vertical-align:middle; margin-right:4px">Microsoft and <img src="images/face++.jpg" alt="Face++" style="height:1em; vertical-align:middle; margin-right:4px">Face++ as a machine learning
+                                        Before joining Rutgers, I worked at <img src="images/microsoft.png"
+                                            alt="Microsoft"
+                                            style="height:1em; vertical-align:middle; margin-right:4px">Microsoft and
+                                        <img src="images/face++.jpg" alt="Face++"
+                                            style="height:1em; vertical-align:middle; margin-right:4px">Face++ as a
+                                        machine learning
                                         engineer.
                                     </p>
                                     <p>
@@ -98,15 +112,28 @@
                         style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                         <tbody>
                             <tr>
-                                <td class="news-cell" style="padding:0 20px;padding-bottom:0px;width:100%;vertical-align:middle">
+                                <td class="news-cell"
+                                    style="padding:0 20px;padding-bottom:0px;width:100%;vertical-align:middle">
                                     <span class="news-line">
-                                        <span class="news-label"><heading style="font-size:16px">News</heading> <img src="images/hajimi.gif" alt="" style="height:1.5em; vertical-align:middle; margin-left:3px; border-radius: 5px;"></span>
+                                        <span class="news-label">
+                                            <heading style="font-size:16px">News</heading> <img src="images/hajimi.gif"
+                                                alt=""
+                                                style="height:1.5em; vertical-align:middle; margin-left:3px; border-radius: 5px;">
+                                        </span>
                                         <span class="rolling-wrapper">
                                             <span class="rolling-track">
-                                                <span class="spanp"><span style="color: #aaa;">[2026.02]</span> My paper Glove2hand got accepted to CVPR 2026 <span class="news-emoji">🎉</span></span>
-                                                <span class="spanp"><span style="color: #aaa;">[2025.08]</span> My paper Motion Blending Gaussian Splatting got accepted to CoRL 2025 <span class="news-emoji">🐻</span></span>
-                                                <span class="spanp"><span style="color: #aaa;">[2025.06]</span> I joined Meta Reality Lab as a research intern <span class="news-emoji">🐷</span></span>
-                                                <span class="spanp"><span style="color: #aaa;">[2025.03]</span> My paper Autoregressive Policy got accepted to RA-L 2025 <span class="news-emoji">🐶</span></span>
+                                                <span class="spanp"><span style="color: #aaa;">[2026.02]</span> My paper
+                                                    Glove2hand got accepted to CVPR 2026 <span
+                                                        class="news-emoji">🎉</span></span>
+                                                <span class="spanp"><span style="color: #aaa;">[2025.08]</span> My paper
+                                                    Motion Blending Gaussian Splatting got accepted to CoRL 2025 <span
+                                                        class="news-emoji">🐻</span></span>
+                                                <span class="spanp"><span style="color: #aaa;">[2025.06]</span> I joined
+                                                    Meta Reality Lab as a research intern <span
+                                                        class="news-emoji">🐷</span></span>
+                                                <span class="spanp"><span style="color: #aaa;">[2025.03]</span> My paper
+                                                    Autoregressive Policy got accepted to RA-L 2025 <span
+                                                        class="news-emoji">🐶</span></span>
                                             </span>
                                         </span>
                                     </span>
@@ -123,9 +150,13 @@
                                     <heading>Research</heading>
                                     <p style="text-align:justify;">
                                         During my PhD, I have
-                                        published <u>seven independent first-author</u> papers in top-tier robotics and vision conferences,
-                                        including CVPR, RSS, RA-L, CoRL, and IROS. These works have received hundreds of stars
-                                        at GitHub. My research focuses on bringing 3D/4D understanding to robotic policy and world modeling. My publications span robot manipulation policy learning, computer vision, 3D reconstruction, and video generation.
+                                        published <u>seven independent first-author</u> papers in top-tier robotics and
+                                        vision conferences,
+                                        including CVPR, RSS, RA-L, CoRL, and IROS. These works have received hundreds of
+                                        stars
+                                        at GitHub. My research focuses on bringing 3D/4D understanding to robotic policy
+                                        and world modeling. My publications span robot manipulation policy learning,
+                                        computer vision, 3D reconstruction, and video generation.
                                     </p>
                                 </td>
                             </tr>
@@ -145,11 +176,15 @@
                                     </video>
                                 </td>
                                 <td width="75%" valign="top">
-                                    <papertitle>🧤 Glove2Hand ✋: Synthesizing Natural Hand-Object Interaction from Multi-Modal Sensing Gloves
+                                    <papertitle>🧤 Glove2Hand ✋: Synthesizing Natural Hand-Object Interaction from
+                                        Multi-Modal Sensing Gloves
                                     </papertitle>
                                     <p>
-                                        <author>Xinyu Zhang</author>, Ziyi Kou, Chuan Qin, Mia Huang, Ergys Ristani, Ankit Kumar, Lele Chen,  Kun He , Abdeslam Boularias, Li Guan
-                                        <span style="margin-left:10px"><img src="images/meta.png" alt="Meta" style="height:1em; vertical-align:middle; margin-right:4px">Meta Reality Lab</span>
+                                        <author>Xinyu Zhang</author>, Ziyi Kou, Chuan Qin, Mia Huang, Ergys Ristani,
+                                        Ankit Kumar, Lele Chen, Kun He , Abdeslam Boularias, Li Guan
+                                        <span style="margin-left:10px"><img src="images/meta.png" alt="Meta"
+                                                style="height:1em; vertical-align:middle; margin-right:4px">Meta Reality
+                                            Lab</span>
                                         <br>
                                         <i>Conference on Computer Vision and Pattern Recognition (CVPR) 2026
                                         </i>
@@ -158,7 +193,8 @@
                                         <!-- <a href="https://arxiv.org/abs/2503.09040" target="_blank">PDF</a> -->
                                         <!-- &nbsp;•&nbsp; -->
                                         <!-- <a href="https://mlzxy.github.io/motion-blender-gs/" target="_blank">Code & Website</a> -->
-                                        <div style="font-size: 12px; color: #366;margin-top:0px">Website, Full Resolution Demo, and Camera Ready PDF Coming Soon</div>
+                                    <div style="font-size: 12px; color: #366;margin-top:0px">Website, Full Resolution
+                                        Demo, and Camera Ready PDF Coming Soon</div>
                                     </p>
 
                                     <div class="ppt">
@@ -193,7 +229,8 @@
                                         <br>
                                         <a href="https://arxiv.org/abs/2503.09040" target="_blank">PDF</a>
                                         &nbsp;•&nbsp;
-                                        <a href="https://mlzxy.github.io/motion-blender-gs/" target="_blank">Code & Website</a>
+                                        <a href="https://mlzxy.github.io/motion-blender-gs/" target="_blank">Code &
+                                            Website</a>
                                     </p>
 
                                     <div class="ppt">

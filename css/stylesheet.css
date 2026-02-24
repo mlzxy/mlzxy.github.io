@@ -1,115 +1,115 @@
 a {
-    text-decoration: none;
-    color: #1565c0;
-  }
-  
-  a:focus,
-  a:hover {
-    text-decoration: none;
-    border-bottom: 1px solid #4b81be;
-    text-decoration-color: none;
-  }
-  
-  body {
+  text-decoration: none;
+  color: #1565c0;
+}
+
+a:focus,
+a:hover {
+  text-decoration: none;
+  border-bottom: 1px solid #4b81be;
+  text-decoration-color: none;
+}
+
+body {
   overflow-x: hidden;
 }
 
-  body,
-  td,
-  th,
-  tr,
-  p,
-  a {
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    line-height: 20px;
-  }
-  
-  p {
-    color: #77808b;
-  }
+body,
+td,
+th,
+tr,
+p,
+a {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+}
 
-  .spanp {
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    color: #77808b;
-  }
-  
-  strong {
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    line-height: 20px;
-    color:#191e3f;
-  }
-  
-  author {
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    line-height: 20px;
-    color:#191e3f;
-  }
-  
-  heading {
-    font-family: 'Roboto', sans-serif;
-    font-size: 22px;
-    color:#191e3f;
-    font-weight: 500;
-  }
-  
-  papertitle {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    color:#191e3f;
-  }
-  
-  name {
-    font-family: 'Roboto', sans-serif;
-    font-size: 25px;
-    color:#191e3f;
-    font-weight: 700;
-  }
-  
-  .one {
-    width: 160px;
-    height: 160px;
-    position: relative;
-  }
-  
-  .two {
-    width: 160px;
-    height: 160px;
-    position: absolute;
-    transition: opacity .2s ease-in-out;
-    -moz-transition: opacity .2s ease-in-out;
-    -webkit-transition: opacity .2s ease-in-out;
-  }
-  
-  .fade {
-    transition: opacity .2s ease-in-out;
-    -moz-transition: opacity .2s ease-in-out;
-    -webkit-transition: opacity .2s ease-in-out;
-  }
-  
-  
-  hr {
-    width: 100%;
-    border: 0;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  span.highlight {
-    background-color: #ffffd0;
-  }
-  
-  #header {
-    height: 100px;
-    border-bottom: 1px solid #ddd;
-  }
+p {
+  color: #77808b;
+}
+
+.spanp {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #77808b;
+}
+
+strong {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #191e3f;
+}
+
+author {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #191e3f;
+}
+
+heading {
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  color: #191e3f;
+  font-weight: 500;
+}
+
+papertitle {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #191e3f;
+}
+
+name {
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+  color: #191e3f;
+  font-weight: 700;
+}
+
+.one {
+  width: 160px;
+  height: 160px;
+  position: relative;
+}
+
+.two {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -webkit-transition: opacity .2s ease-in-out;
+}
+
+.fade {
+  transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -webkit-transition: opacity .2s ease-in-out;
+}
+
+
+hr {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+span.highlight {
+  background-color: #ffffd0;
+}
+
+#header {
+  height: 100px;
+  border-bottom: 1px solid #ddd;
+}
 
 
 .shadow-border {
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 .ppt {
@@ -133,6 +133,7 @@ a {
 .news-table {
   table-layout: fixed;
 }
+
 .news-cell {
   overflow: hidden;
   min-width: 0;
@@ -145,6 +146,7 @@ a {
   align-items: center;
   gap: 10px;
 }
+
 .news-label {
   flex-shrink: 0;
 }
@@ -156,24 +158,30 @@ a {
   overflow: hidden;
   vertical-align: middle;
 }
+
 .rolling-track {
   display: inline-block;
   white-space: nowrap;
   animation: rolling-news 45s linear infinite;
 }
+
 @keyframes rolling-news {
-  from { transform: translateX(0); }
-  to { transform: translateX(-100%); }
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
+
 .rolling-track .spanp {
   margin-right: 0;
 }
+
 .rolling-track .spanp::after {
   content: " \00a0•\00a0 ";
   color: #aaa;
-}
-.rolling-track .spanp:last-of-type::after {
-  content: none;
 }
 
 /* Blinking emoji at end of each news item */
@@ -181,7 +189,91 @@ a {
   display: inline-block;
   animation: news-emoji-blink 1.2s ease-in-out infinite;
 }
+
 @keyframes news-emoji-blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.35; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.35;
+  }
+}
+
+/* ===== Mobile responsive (does NOT affect desktop) ===== */
+@media (max-width: 768px) {
+
+  /* Main container: allow flexible sizing */
+  #main {
+    table-layout: auto !important;
+    margin-top: 0 !important;
+  }
+
+  /* Stack table cells vertically */
+  #main table tbody tr {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #main table tbody tr td {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  /* Profile photo: center it */
+  img[alt="profile photo"] {
+    display: block;
+    max-width: 200px !important;
+    margin: 0 auto;
+  }
+
+  /* Research circle diagram: push below text in bio cell */
+  td[style*="width:75%"] {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  img[alt="Research Figure"] {
+    float: none !important;
+    display: block;
+    width: 70% !important;
+    max-width: 250px !important;
+    height: auto !important;
+    margin: 15px auto !important;
+    order: 99;
+  }
+
+  /* Paper entry videos: scale to fill container */
+  video[width="280"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Paper entry static images (thumbnails): scale to fill */
+  td img[width="280"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Hidden PPT detail boxes: fill width */
+  .ppt {
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  /* Reduce horizontal padding on mobile */
+  td[style*="padding-left:20px"] {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  td[style*="padding:2.5%"] {
+    padding: 10px !important;
+  }
 }
