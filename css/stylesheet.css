@@ -57,8 +57,11 @@
   --radius-pill: 999px;
 }
 
+/* Dark tokens — applied when OS prefers dark (and user hasn't forced light),
+   or when user has explicitly chosen dark via the toggle. */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
     --ink-900: #e8eaf0;
     --ink-700: #b8bdcc;
     --ink-500: #8089a0;
@@ -76,6 +79,76 @@
     --shadow-1: 0 1px 2px rgba(0, 0, 0, .4), 0 1px 3px rgba(0, 0, 0, .5);
     --shadow-2: 0 4px 16px rgba(0, 0, 0, .5);
   }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --ink-900: #e8eaf0;
+  --ink-700: #b8bdcc;
+  --ink-500: #8089a0;
+  --ink-300: #2a3140;
+  --bg:      #0d1117;
+  --bg-soft: #161b25;
+  --accent:  #7aa2ff;
+  --accent-hover: #a8c1ff;
+  --highlight-bg: #3a2f00;
+  --highlight-fg: #ffd966;
+  --review-bg:    #3a1e1d;
+  --review-fg:    #ff9c95;
+  --oral-bg:      #0f2e23;
+  --oral-fg:      #6ad6a9;
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, .4), 0 1px 3px rgba(0, 0, 0, .5);
+  --shadow-2: 0 4px 16px rgba(0, 0, 0, .5);
+}
+
+/* Theme toggle — fixed, doesn't affect document flow */
+.theme-toggle {
+  position: fixed;
+  top: var(--space-4);
+  right: var(--space-4);
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid var(--ink-300);
+  border-radius: var(--radius-pill);
+  background: var(--bg);
+  color: var(--ink-700);
+  cursor: pointer;
+  z-index: 100;
+  box-shadow: var(--shadow-1);
+  transition: background .15s ease, color .15s ease, border-color .15s ease;
+}
+
+.theme-toggle:hover {
+  color: var(--ink-900);
+  border-color: var(--ink-500);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.theme-toggle svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+/* Default (light mode): show moon (click to go dark) */
+.theme-toggle .icon-sun { display: none; }
+.theme-toggle .icon-moon { display: block; }
+
+/* When effective theme is dark, show sun (click to go light) */
+:root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+:root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle .icon-sun { display: block; }
+  :root:not([data-theme="light"]) .theme-toggle .icon-moon { display: none; }
 }
 
 /* ============================================================
